@@ -1,0 +1,19 @@
+{
+  "name": "@scope/library-fixture",
+  "version": "1.0.0",
+  "description": "Fixture library",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/example/library-fixture.git"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "fix-my-package-json",
+  "version": "0.1.0",
+  "description": "A deterministic CLI that audits package.json files and proposes safe fixes.",
+  "type": "module",
+  "bin": {
+    "fix-my-package-json": "./dist/cli/index.js",
+    "fmpj": "./dist/cli/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "npm run clean && tsc -p tsconfig.build.json",
+    "check": "npm run typecheck && npm test",
+    "clean": "rm -rf dist",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "prepare": "npm run build",
+    "prepack": "npm run build",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "keywords": [
+    "package-json",
+    "node",
+    "cli",
+    "audit"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.12",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^4.1.8"
+  }
+}
